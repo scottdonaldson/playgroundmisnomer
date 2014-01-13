@@ -7,7 +7,8 @@
         <meta http-equiv="Content-language" content="<?php bloginfo('language'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favico.ico" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
         <!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/ie.css" /><![endif]-->
 	
         
