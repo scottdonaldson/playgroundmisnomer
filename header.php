@@ -9,8 +9,6 @@
         <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favico.ico" type="image/x-icon" />
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
-        <!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/ie.css" /><![endif]-->
-	
         
         <?php
 			wp_enqueue_script('jquery');
