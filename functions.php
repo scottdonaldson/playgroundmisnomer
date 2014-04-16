@@ -5,6 +5,9 @@
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
+register_sidebar('Sidebar 1');
+register_sidebar('Sidebar 2');
+
 function sight_setup() {
 	update_option('thumbnail_size_w', 300);
     update_option('thumbnail_size_h', 300);

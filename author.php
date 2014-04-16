@@ -6,7 +6,7 @@ $post = $posts[0];
 <div class="content-title">
 	<p>All posts by <?= $curauth->display_name; ?>
 		<?php if ( get_field('google_profile', 'user_' . $curauth->ID )) { ?>
-	        <a rel="me" href="https://profiles.google.com/scott.p.donaldson">
+	        <a rel="me" href="<?php the_field('google_profile', 'user_' . $curauth->ID ); ?>">
 			 	<img src="http://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16">
 			</a>
 		<?php } ?>

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
         <meta property="fb:admins" content="1543242988,8643044" />
         <title><?php wp_title(''); ?></title>
-
-        <link rel="shortcut icon" href="<?= bloginfo('template_url'); ?>/images/favico.ico" type="image/x-icon">
-        <link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/style.css">
-        <link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/css/style.css">
-
-        <script src="<?= bloginfo('template_url'); ?>/js/vendor/modernizr.js"></script>
+        <meta http-equiv="Content-language" content="<?php bloginfo('language'); ?>" />
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favico.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
+        <!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/ie.css" /><![endif]-->
+	
         
         <?php
 			wp_enqueue_script('jquery');
@@ -19,8 +20,8 @@
             wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
 		?>
         <?php wp_head(); ?>
-        <?php if ( is_home() ) : ?>
-        <script>
+        <?php if ( is_home() && !get_option('ss_disable') ) : ?>
+        <script type="text/javascript">
             (function($) {
                 $(function() {
                     $('#slideshow').cycle({
@@ -30,11 +31,11 @@
                         prev:   '#larr'
                     });
                 })
-            })(jQuery);
+            })(jQuery)
         </script>
         <?php endif; ?>
 	</head>    
-	<body <?php body_class(); ?>>
+	<body>
     
         <div class="page-wrap">
         <div class="wrapper hfeed">
@@ -53,8 +54,14 @@
                     <a href="http://www.twitter.com/pgmisnomer" class="twitter" target="_blank"></a>
                     <a href="http://www.facebook.com/playgroundmisnomer" class="facebook" target="_blank"></a>            
                 </div>
-
+                
+                
+                <!-- ACTIVATE ONCE ADS ARE READY <a href="<?php // echo (get_option('header-ad-link')) ? get_option('header-ad-link') : '' ?>"><img class="header-ad" src="<?php // echo (get_option('header-ad')) ? get_option('header-ad') : '' ?>" width="728" height="90"/></a> -->
+                
                 <?php get_search_form(); ?>
+
+
+                
 
             </div>
 
