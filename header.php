@@ -38,6 +38,21 @@
 	<body>
     
         <div class="page-wrap">
+
+        <?php if (!is_user_logged_in()) { ?>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- PM Leaderboard -->
+        <div style="text-align: center;">
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-7985568994999759"
+                 data-ad-slot="6433977974"></ins>
+        </div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <?php } ?>
+
         <div class="wrapper hfeed">
 
             <div class="header clear" <?php echo (get_option('border_color')) ? 'style="border-top: 26px solid '.get_option('border_color').';"' : '' ?>>
