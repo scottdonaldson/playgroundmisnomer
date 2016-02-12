@@ -46,6 +46,8 @@
 
     </div>
 
+    <?php get_template_part('pagination'); ?>
+
 <?php endif; ?>
 
 <?php // wp_reset_query(); ?>
