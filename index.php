@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main-content-title">
-    Latest items
-    <!-- <a href="javascript: void(0);" id="mode"<?php if ($_COOKIE['mode'] == 'grid') echo ' class="flip"'; ?>></a> !-->
-</div>
+<div class="main-content-title">Latest items</div>
 
 <?php /* query_posts(array(
         'post__not_in' => $exl_posts,
@@ -39,7 +36,6 @@
             <div class="post-content">
 				<?php 
                 the_excerpt();
-						//if (function_exists('smart_excerpt')) smart_excerpt(get_the_excerpt(), 55); 
 				?>
                 <a href="<?php the_permalink(); ?>">Read more &raquo;</a>
                  
