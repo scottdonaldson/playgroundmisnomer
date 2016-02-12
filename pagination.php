@@ -6,4 +6,4 @@
     </div>
     <?php else : ?>
     <div id="pagination"><?php next_posts_link(__('LOAD MORE')); ?></div>
-<?php endif; ?>; ?>
+<?php endif; ?>
